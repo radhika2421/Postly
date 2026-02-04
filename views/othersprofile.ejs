@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/otherprofile.css">
+    <title><%=user.name%></title>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <form method="get" action="/postly/home/<%=user.userId%>">
+                <button class="home-btn">Home</button>
+            </form>
+        </div>
+        <h2><%=user.name%></h2>
+        <div class="info">
+            <p><span>No. of posts: </span><%=postCnt%></p>
+        </div>
+        <div class="profile-actions">
+            <!-- <form class="change-password">
+                <button class="btn users">Like</button>
+            </form> -->
+        </div>
+    </div>
+    <div class="posts-container">
+        <h1 class="heading">My Posts</h1>
+        <div class="allPosts">
+            <% if(postCnt===0){ %>
+                <h4>You have no posts yet</h5>
+            <%}%>
+            <% if(postCnt>0) { %>
+                <ul>
+                <% for( let post of posts) { %>
+                    <li>
+                        <div class="post">
+                            <h3 class="post-content subject"><b><%=post.subject%></b></h3>
+                            <p class="post-content content">>>> <%= post.content %></p>
+                            <p class="post-content date">Posted on: <%=post.date_posted.toDateString() %></p>
+                        </div>
+                    </li>
+                    <div class="postActions">
+                        <form class="showPost">
+                            <button class="btn">Like</button>
+                        </form>
+                    </div>
+                    <hr>
+                <% } %>
+                </ul>
+            <% }%>
+        </div>
+    </div>
+</body>
+</html>

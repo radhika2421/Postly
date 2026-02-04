@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/newpost.css">
+    <title>Create New Post</title>
+</head>
+<body class="page">
+    <h2>Create New Post</h2>
+
+    <form method="post" action="/postly/new-post/<%=id%>" class="newPost">
+        <label>Subject :</label>
+        <input placeholder="Write subject" name="subject">
+        <br>
+        <label>Content :</label>
+        <textarea placeholder="Write your thoughts..." name="content"></textarea>
+        <br>
+        <button class="btn">Submit</button>
+    </form>
+</body>
+
+</html>

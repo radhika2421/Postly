@@ -1,0 +1,124 @@
+/* Page base*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(10, 20, 30, 0.75),
+            rgba(10, 20, 30, 0.75)
+        ),
+        url("/img/blue_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #e6edf3;
+    padding: 30px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Table wrapper */
+.allUsers {
+    display: flex;
+    justify-content: center;
+}
+
+/* Table */
+.userTable {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background:
+        linear-gradient(
+            rgba(10, 20, 30, 0.75),
+            rgba(10, 20, 30, 0.75)
+        ),
+        url("/img/blue_bg.jpg");
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Table headers */
+.table-headers th {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 35, 50, 0.92),
+        rgba(15, 28, 42, 0.92)
+    );
+    color: #aaa;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 14px;
+    border-bottom: 1px solid #222;
+}
+
+/* Table rows */
+.table-data td {
+    padding: 14px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #222;
+    color: #eee;
+}
+
+/* Hover row */
+.table-data:hover {
+    background-color: #1a1a1a;
+}
+
+
+/* responsive */
+@media (max-width: 900px) {
+    body {
+        padding: 24px;
+    }
+
+    .userTable {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 18px;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .table-headers th,
+    .table-data td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        font-size: 1.4rem;
+    }
+
+    .table-headers th,
+    .table-data td {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+}

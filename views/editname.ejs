@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/editname.css">
+    <title>Edit name</title>
+</head>
+<body>
+    <h2>Edit Name</h2>
+
+    <form method="post" action="/postly/edit-name/<%=user.userId%>?_method=PATCH" class="editUser">
+        <label>Old Username : <%=user.name%></label>
+        <br>
+        <label>New Username :</label>
+        <input placeholder="username" name="username">
+        <br>
+        <label>Password :</label>
+        <input type="password" placeholder="Enter password" name="password">
+        <br>
+        <button class="btn">Save Change</button>
+    </form>
+</body>
+</html>

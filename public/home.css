@@ -1,0 +1,160 @@
+/* =======================
+   Base + Reset
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* =======================
+   HOME PAGE
+======================= */
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(10, 20, 30, 0.75),
+            rgba(10, 20, 30, 0.75)
+        ),
+        url("/img/blue_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #e6edf3;
+    padding: 30px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #eaf2f8;
+}
+
+/* Posts wrapper */
+.allPosts {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.allPosts ul {
+    list-style: none;
+}
+
+/* Single post card */
+.post {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 35, 50, 0.9),
+        rgba(15, 28, 42, 0.9)
+    );
+    padding: 22px 26px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Post meta */
+.post-content.user {
+    color: #9fb3c8;
+    margin-bottom: 4px;
+}
+
+.post-content.date {
+    font-size: 0.75rem;
+    color: #8fa3b5;
+    margin-bottom: 10px;
+}
+
+/* Subject */
+.post-content.subject {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #eaf2f8;
+}
+
+/* Content */
+.post-content.content {
+    font-size: 0.95rem;
+    color: #d3e0ec;
+    line-height: 1.5;
+}
+
+/* New post button wrapper */
+.newPost {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button */
+.btn {
+    padding: 10px 24px;
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #8fb3cc, #b6d3e6);
+    color: #0c1a24;
+
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(182, 211, 230, 0.45);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media (max-width: 900px) {
+    .allPosts {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .post {
+        padding: 18px 20px;
+    }
+
+    .post-content.subject {
+        font-size: 1.05rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 9px 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        font-size: 1.4rem;
+    }
+
+    .post {
+        padding: 16px 18px;
+    }
+}
+

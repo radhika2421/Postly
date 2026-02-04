@@ -1,0 +1,148 @@
+/* Page base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Heading */
+body{
+    min-height: 100vh;
+    background:linear-gradient(
+            rgba(10, 20, 30, 0.75),
+            rgba(10, 20, 30, 0.75)
+        ),
+        url("/img/blue_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #e6edf3;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 28px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #eaf2f8;
+    letter-spacing: 0.3px;
+}
+
+.page > div {
+    background: linear-gradient(
+        180deg,
+        rgba(15, 29, 43, 0.92),
+        rgba(15, 28, 42, 0.92)
+    );
+    padding: 35px 45px;
+    border-radius: 12px;
+    width: 360px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Form */
+.login {
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 42px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(20, 35, 50, 0.92),
+        rgba(15, 28, 42, 0.92)
+    );
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Labels */
+.login label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #b6c9da;
+}
+
+/* Inputs */
+.login input {
+    width: 100%;
+    padding: 13px 14px;
+
+    background: rgba(8, 16, 24, 0.9);
+    border: 1px solid rgba(160, 190, 215, 0.35);
+    border-radius: 10px;
+
+    color: #eef4fa;
+    font-size: 0.95rem;
+
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.login input::placeholder {
+    color: #666;
+}
+
+.login input:focus {
+    border-color: #9fc3dd;
+    box-shadow: 0 0 0 3px rgba(159, 195, 221, 0.3);
+}
+
+/* Submit button */
+.btn {
+    margin-top: 12px;
+    padding: 14px 0;
+
+    background: linear-gradient(135deg, #8fb3cc, #b6d3e6);
+    color: #0c1a24;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(182, 211, 230, 0.45);
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .login{
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+}

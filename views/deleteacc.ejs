@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/deleteacc.css">
+    <title>Delete Account</title>
+</head>
+<body>
+    <h2>Are you sure you want to delete your account?</h2>
+
+    <form method="post" action="/postly/delete/<%=user.userId%>?_method=DELETE" class="delUser">
+        <label class="delete">Enter password to confirm : </label>
+        <input type="password" name="password" placeholder="Enter password" class="delete">
+        <br>
+        <button class="btn">Confirm</button>
+    </form>
+</body>
+</html>

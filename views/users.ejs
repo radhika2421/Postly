@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/users.css">
+    <title>All Users</title>
+</head>
+<body>
+    <h1 class="heading">All Users</h1>
+    <div class="allUsers">
+        <table class="userTable">
+            <tr class="table-headers">
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <% for (let user of users) { %>
+                <tr class="table-data">
+                    <td><%=user.userId%></td>
+                    <td><%=user.name%></td>
+                    <td><%=user.email%></td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+</body>
+</html>

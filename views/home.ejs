@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home.css">
+    <title>Postly | Home Page</title>
+</head>
+<body>
+    <h1 class="heading">Home Page</h1>
+    <div class="allPosts">
+        <ul>
+            <% for (let post of posts) { %>
+                <li>
+                    <div class="post">
+                        <h2 class="post-content user" ><a href="/postly/<%=user.userId%>/profile/<%=post.userId%>">Posted by @<%=post.name%></a></h2>
+                        <p class="post-content date">Posted on: <%=post.date_posted.toDateString()%></p>
+                        <h3 class="post-content subject"><%=post.subject%></h3>
+                        <p class="post-content content"><%=post.content%></p>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+    <div>
+        <form method="get" action="/postly/new-post/<%=user.userId%>" class="newPost">
+            <button class="btn">New Post</button>
+        </form>
+    </div>
+</body>
+</html>

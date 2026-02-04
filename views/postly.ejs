@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/postly.css">
+    <title>Postly | Welcome</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Postly</h1>
+        <p class="tagline">Share thoughts. Connect minds.</p>
+
+        <div class="actions">
+            <form method="get" action="/postly/login">
+                <button class="btn login">Login</button>
+            </form>
+            <form method="get" action="/postly/register">
+                <button class="btn register">Register</button>
+            </form>
+        </div>
+        <div class="seeUsers">
+            <h4 class="userCnt">The total number of users are : <%=userCount%></h4>
+            <form method="get" action="/postly/users">
+                <button class="btn users">See All Users</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

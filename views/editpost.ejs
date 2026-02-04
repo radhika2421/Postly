@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/editpost.css">
+    <title>Edit Post</title>
+</head>
+<body class="page">
+    <h2>Edit Post</h2>
+    <form method="post" action="/postly/edit-post/<%=post.postId%>?_method=PATCH" class="editPost">
+        <label>Subject: <%=post.subject%></label>
+        <br>
+        <label>Old content: <%=post.content%></label>
+        <br>
+        <label>New Content :</label>
+        <textarea placeholder="..." name="newContent"></textarea>
+        <br>
+        <button class="btn">Save Changes</button>
+    </form>
+</body>
+</html>
+
+
+    <!-- let q1=`Select * from users where email="${email}"`;
+    
+            let q3=`Select COUNt(*) as postCnt from posts where userId="${result1[0].userId}"`;
+            const [result2]=await connection.query(q2);
+                const [result3]=await connection.query(q3); -->

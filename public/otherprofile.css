@@ -1,0 +1,256 @@
+/* =======================
+   Base + Reset
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* =======================
+   Page base (Blue theme)
+======================= */
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(10, 20, 30, 0.75),
+            rgba(10, 20, 30, 0.75)
+        ),
+        url("/img/blue_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #e6edf3;
+    padding: 30px;
+}
+
+/* =======================
+   PROFILE SECTION
+======================= */
+.profile-container {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 35, 50, 0.92),
+        rgba(15, 28, 42, 0.92)
+    );
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 30px 40px;
+    border-radius: 14px;
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Header (Home button row) */
+.profile-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+/* Small home button */
+.home-btn {
+    background: rgba(8, 16, 24, 0.9);
+    border: 1px solid rgba(160, 190, 215, 0.35);
+    color: #b6c9da;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.home-btn:hover {
+    background: #b6d3e6;
+    color: #0c1a24;
+    border-color: #b6d3e6;
+}
+
+/* Username */
+.profile-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #eaf2f8;
+}
+
+/* Info row */
+.info {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #d3e0ec;
+}
+
+.info span {
+    color: #9fb3c8;
+}
+
+/* Profile actions (if you add buttons later) */
+.profile-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.profile-actions form {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* =======================
+   POSTS SECTION
+======================= */
+.posts-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #eaf2f8;
+}
+
+/* Empty state */
+.allPosts h4 {
+    color: #b6c9da;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Posts list */
+.allPosts ul {
+    list-style: none;
+}
+
+/* Single post card */
+.post {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 35, 50, 0.9),
+        rgba(15, 28, 42, 0.9)
+    );
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Post content */
+.post-content.subject {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #eaf2f8;
+}
+
+.post-content.content {
+    font-size: 0.95rem;
+    color: #d3e0ec;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.post-content.date {
+    font-size: 0.75rem;
+    color: #9fb3c8;
+}
+
+/* Post actions (Like button row) */
+.postActions {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 25px;
+    flex-wrap: wrap;
+}
+
+.postActions form {
+    flex: 1;
+}
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid rgba(160, 190, 215, 0.25);
+    margin-bottom: 25px;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn {
+    width: 100%;
+    padding: 9px 0;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #8fb3cc, #b6d3e6);
+    color: #0c1a24;
+
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(182, 211, 230, 0.45);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+    .profile-container,
+    .posts-container {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .profile-container {
+        padding: 22px 18px;
+    }
+
+    .profile-container h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .post {
+        padding: 16px 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    .profile-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+    }
+}
